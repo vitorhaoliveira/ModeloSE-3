@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Alunos</title>
+</head>
+<body>
+    <h1>Resultado do Aluno</h1>
+    <div id="situacao">
+
+    </div>
+
+    <script>
+        let nome = prompt("Digite seu nome")
+        let prof = prompt("Digite o nome do professor")
+        let nota1 = Number(prompt("Digite a primeira nota"))
+        let nota2 = Number(prompt("Digite a segunda nota"))
+        let nota3 = Number(prompt("Digite a terceira nota"))
+
+        let media = ((nota1 + nota2 + nota3)/3).toFixed(2);
+        let situacao;
+
+        if (media <4){
+            situacao = "Você está reprovado!";
+        }
+
+        else if (media <7){
+            situacao = "Você está de recuperação!";
+        }
+
+        else if (media <11){
+            situacao = "Parabens você foi Aprovado!";
+        }
+
+        else {
+            situacao = "Esta média é invalida"
+        }
+
+
+        document.getElementById("situacao").innerHTML = "Professor: " + prof + "</br>" + "Aluno: " + nome + "</br>" + "Média: " + media + "</br>" + "Situação final: " + situacao + "</br>";
+    </script>
+
+</body>
+</html>
